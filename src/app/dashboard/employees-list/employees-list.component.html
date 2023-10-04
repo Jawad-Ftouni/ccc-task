@@ -1,0 +1,54 @@
+<h1>Employees</h1>
+<table class="dark-table">
+  <thead>
+    <th class="table-header">Name</th>
+    <th class="table-header">Email</th>
+    <th class="table-header">Address</th>
+    <th class="table-header">Password</th>
+    <th class="table-header">Department</th>
+    <th class="table-header">Role</th>
+    <th class="table-header">Action</th>
+  </thead>
+  <tbody>
+    <ng-container>
+    <tr *ngFor="let employee of employees; let i = index" class="table-row" >
+      <td class="table-cell">
+        <span *ngIf="!editingEmployees[i]">{{ employee.name }}</span>
+        <input *ngIf="editingEmployees[i]" type="text" [(ngModel)]="employee.name">
+      </td>
+      <td class="table-cell">
+        <span *ngIf="!editingEmployees[i]">{{ employee.email }}</span>
+        <input *ngIf="editingEmployees[i]" type="email" [(ngModel)]="employee.email">
+      </td>
+      <td class="table-cell">
+        <span *ngIf="!editingEmployees[i]">{{ employee.address }}</span>
+        <input *ngIf="editingEmployees[i]" type="text" [(ngModel)]="employee.address">
+      </td>
+      <td class="table-cell">
+        <span *ngIf="!editingEmployees[i]">{{ employee.password }}</span>
+        <input *ngIf="editingEmployees[i]" type="password" [(ngModel)]="employee.password">
+      </td>
+      <td class="table-cell-5">
+        <span *ngIf="!editingEmployees[i]">{{ employee.department_id }}</span>
+        <select *ngIf="editingEmployees[i]" [(ngModel)]="employee.department_id">
+          <option value="1">Department 1</option>
+          <option value="2">Department 2</option>
+        </select>
+      <td class="table-cell">
+        <span *ngIf="!editingEmployees[i]">{{ employee.role }}</span>
+        <select *ngIf="editingEmployees[i]" [(ngModel)]="employee.role">
+          <option value="Employee">Employee</option>
+          <option value="HR">HR</option>
+        </select>
+      </td>
+      <td class="table-cell">
+        <img src="./../../../assets/edit-icon.png" class="img" *ngIf="!editingEmployees[i]"(click)="toggleEdit(i)"/>
+        <img src="./../../../assets/submit-icon.png" class="img" *ngIf="editingEmployees[i]" (click)="saveEdit(i)"/>
+        <img src="./../../../assets/close-icon.png" class="img" *ngIf="editingEmployees[i]" (click)="cancelEdit(i)" />
+      </td>
+      
+    </tr>
+  </ng-container>
+  </tbody>
+  
+</table>

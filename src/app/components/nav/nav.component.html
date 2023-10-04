@@ -1,0 +1,11 @@
+<div [class.logout-btn-container]="isLoggedIn" class="logout-btn-container-2"> 
+  <div [class.logout-btn-flex-container-employee]="isEmployee" class="logout-btn-flex-container">
+    <a (click)="selectRoute('/dashboard')" [class.active]="selectedRoute === '/dashboard'" *ngIf="isHr">Employees</a>
+    <a (click)="selectRoute('/employees-leaves')" [class.active]="selectedRoute === '/employees-leaves'" *ngIf="isHr">Leaves</a>
+    <a (click)="selectRoute('/employees-expenses')" [class.active]="selectedRoute === '/employees-expenses'" *ngIf="isHr">Expenses</a>
+    <a (click)="selectRoute('/expenses')" [class.active]="selectedRoute === '/expenses'" *ngIf="isEmployee">Expenses</a>
+    <a (click)="selectRoute('/leaves')" [class.active]="selectedRoute === '/leaves'" *ngIf="isEmployee">Leaves</a>
+    <a (click)="selectRoute('/analytics')" [class.active]="selectedRoute === '/analytics'" *ngIf="isHr">Analytics</a>
+  </div>
+  <img src="../assets/logout-btn3.png" alt="returnToEmployeesList" (click)="Logout()" class="img-back">
+</div>

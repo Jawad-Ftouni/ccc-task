@@ -1,0 +1,544 @@
+{
+  "Employees": [
+    {
+      "id": 1,
+      "name": "Test1",
+      "email": "test@gmail.com",
+      "password": "12345678",
+      "role": "Hr",
+      "address": "123 Mainw",
+      "department_id": "2",
+      "leaves": [
+        {
+          "id": 101,
+          "leave_type_name": "Annual Leave",
+          "from": "2023-09-01",
+          "to": "2023-09-17",
+          "number_of_days": 5,
+          "note": "Vacation request"
+        },
+        {
+          "id": 202,
+          "leave_type_name": "Annual Leave",
+          "from": "2023-09-03",
+          "to": "2023-09-20",
+          "number_of_days": 55,
+          "note": "Vacation request"
+        },
+        {
+          "id": 202,
+          "leave_type_name": "Annual Leave",
+          "from": "2023-09-03",
+          "to": "2023-09-20",
+          "number_of_days": 55,
+          "note": "Vacation request"
+        },
+        {
+          "id": 202,
+          "leave_type_name": "Privilege Leave",
+          "from": "2023-09-03",
+          "to": "2023-09-20",
+          "number_of_days": 55,
+          "note": "Vacation request"
+        },
+        {
+          "id": 202,
+          "leave_type_name": "Privilege Leave",
+          "from": "2023-09-03",
+          "to": "2023-09-20",
+          "number_of_days": 55,
+          "note": "Vacation request"
+        }
+      ],
+      "expense_claims": []
+    },
+    {
+      "id": 2,
+      "name": "Test2",
+      "email": "test@gmail.com",
+      "password": "12345678",
+      "role": "Employee",
+      "address": "123 Main",
+      "department_id": 1,
+      "leaves": [
+        {
+          "id": 201,
+          "leave_type_name": "Privilege Leaves",
+          "from": "2023-09-01",
+          "to": "2023-09-05",
+          "number_of_days": 5,
+          "note": "Vacation request"
+        },
+        {
+          "id": 202,
+          "leave_type_name": "Sick Leave",
+          "from": "2023-09-01",
+          "to": "2023-09-05",
+          "number_of_days": 5,
+          "note": "Vacation request"
+        },
+        {
+          "id": 3,
+          "leave_type_name": "Earned Leave",
+          "from": "2023-09-07",
+          "to": "2023-09-08",
+          "number_of_days": 15,
+          "note": "edadeadadedaedead"
+        },
+        {
+          "id": 4,
+          "leave_type_name": "Annual Leave",
+          "from": "2023-10-11",
+          "to": "2023-10-19",
+          "number_of_days": 14,
+          "note": "dawadaw"
+        },
+        {
+          "id": 5,
+          "leave_type_name": "Annual Leave",
+          "from": "2023-10-05",
+          "to": "2023-10-11",
+          "number_of_days": 13023,
+          "note": "xsascsacascasc"
+        }
+      ],
+      "expense_claims": [
+        {
+          "id": 1,
+          "date": "2023-09-01",
+          "description": "Approved",
+          "total": 100,
+          "status": "Approved",
+          "expense_claim_details": []
+        },
+        {
+          "id": 2,
+          "date": "2023-09-01",
+          "description": "The beef .",
+          "total": 27,
+          "status": "Pending",
+          "expense_claim_details": [
+            {
+              "date": "2023-09-02",
+              "description": "So t.",
+              "type": "hotel",
+              "total": 21
+            },
+            {
+              "date": "2023-09-07",
+              "description": "12",
+              "type": "hotel",
+              "total": 29
+            }
+          ]
+        },
+        {
+          "date": "2023-09-14",
+          "description": "The beef is seasoneds.",
+          "total": 143,
+          "status": "Approved",
+          "expense_claim_details": [
+            {
+              "date": "2023-09-01",
+              "description": "bazela2",
+              "type": "car rental",
+              "total": 23
+            }
+          ],
+          "id": 3
+        },
+        {
+          "date": "2023-09-04",
+          "description": "The beef is seasoned with as.",
+          "total": 295,
+          "status": "Approved",
+          "expense_claim_details": [
+            {
+              "date": "2023-09-15",
+              "description": "bazela2",
+              "type": "food",
+              "total": 80
+            }
+          ],
+          "id": 4
+        },
+        {
+          "date": "2023-09-14",
+          "description": "111",
+          "total": 575,
+          "status": "Rejected",
+          "expense_claim_details": [
+            {
+              "date": "2023-09-16",
+              "description": "bazela2",
+              "type": "ticket",
+              "total": 100
+            },
+            {
+              "date": "2023-09-16",
+              "description": "bazela2",
+              "type": "ticket",
+              "total": 30
+            }
+          ],
+          "id": 5
+        },
+        {
+          "date": "2023-08-31",
+          "description": "222",
+          "total": 15,
+          "status": "Approved",
+          "expense_claim_details": [
+            {
+              "date": "2023-09-07",
+              "description": "222",
+              "type": "5",
+              "total": 5
+            },
+            {
+              "date": "2023-09-15",
+              "description": "bazela2",
+              "type": "swasqwswqs",
+              "total": 5
+            }
+          ],
+          "id": 6
+        },
+        {
+          "date": "2023-09-14",
+          "description": "bazela2",
+          "total": 30,
+          "status": "Pending",
+          "expense_claim_details": [
+            {
+              "date": "2023-09-15",
+              "description": "21212",
+              "type": "car rental",
+              "total": 13
+            },
+            {
+              "date": "2023-09-29",
+              "description": "e3e3",
+              "type": "food",
+              "total": 9
+            }
+          ],
+          "id": 7
+        },
+        {
+          "date": "2023-10-06",
+          "description": "testtestest",
+          "total": 16,
+          "status": "Rejected",
+          "expense_claim_details": [
+            {
+              "date": "2023-10-05",
+              "description": "high quality",
+              "type": "car rental",
+              "total": 10
+            }
+          ],
+          "id": 8
+        },
+        {
+          "date": "2023-10-12",
+          "description": "",
+          "total": 3445,
+          "status": "Approved",
+          "expense_claim_details": [
+            {
+              "date": "2023-10-04",
+              "description": "21212",
+              "type": "food",
+              "total": 11
+            }
+          ],
+          "id": 9
+        },
+        {
+          "date": "2023-10-06",
+          "description": "food",
+          "total": 44,
+          "status": "Approved",
+          "expense_claim_details": [
+            {
+              "date": "2023-10-13",
+              "description": "chicken",
+              "type": "food",
+              "total": 13
+            },
+            {
+              "date": "2023-10-27",
+              "description": "jelluu",
+              "type": "car rental",
+              "total": 19
+            }
+          ],
+          "id": 10
+        },
+        {
+          "date": "2023-10-04",
+          "description": "batat",
+          "total": 66,
+          "status": "Approved",
+          "expense_claim_details": [
+            {
+              "date": "2023-10-06",
+              "description": "low quality",
+              "type": "car rental",
+              "total": 24
+            },
+            {
+              "date": "2023-10-14",
+              "description": "mashroom",
+              "type": "food",
+              "total": 19
+            }
+          ],
+          "id": 11
+        },
+        {
+          "date": "2023-10-06",
+          "description": "seasoned",
+          "total": 44,
+          "status": "Approved",
+          "expense_claim_details": [
+            {
+              "date": "2023-10-31",
+              "description": "So while Coke has a vanilla-raisin taste that leads to a smoother sip of Coca-Cola in a taste test, Pepsi's citrus flavor stands out in those same taste tests because it's a sharp, zippy sip from the citric acid ingredient. It's the citrus tanginess of Pepsi that determines whether people will love it hate it.",
+              "type": "food",
+              "total": 35
+            }
+          ],
+          "id": 12
+        },
+        {
+          "date": "2023-10-26",
+          "description": "traveling",
+          "total": 37,
+          "status": "Rejected",
+          "expense_claim_details": [
+            {
+              "date": "2023-10-26",
+              "description": "germany",
+              "type": "car rental",
+              "total": 24
+            }
+          ],
+          "id": 13
+        }
+      ]
+    },
+    {
+      "name": "jawad",
+      "email": "jawad@gmail.com",
+      "password": "11111111",
+      "address": "harethreik",
+      "department_id": "1",
+      "role": "Hr",
+      "expense_claims": [
+        {
+          "id": 1,
+          "date": "2023-09-01",
+          "description": "Approved",
+          "total": 100,
+          "status": "Approved",
+          "expense_claim_details": []
+        },
+        {
+          "id": 2,
+          "date": "2023-09-01",
+          "description": "The beef",
+          "total": 27,
+          "status": "Pending",
+          "expense_claim_details": [
+            {
+              "date": "2023-09-02",
+              "description": "So t.",
+              "type": "hotel",
+              "total": 21
+            },
+            {
+              "date": "2023-09-07",
+              "description": "12",
+              "type": "hotel",
+              "total": 29
+            }
+          ]
+        },
+        {
+          "date": "2023-09-14",
+          "description": "The beef is seasoneds.",
+          "total": 143,
+          "status": "Approved",
+          "expense_claim_details": [
+            {
+              "date": "2023-09-01",
+              "description": "test",
+              "type": "car rental",
+              "total": 23
+            }
+          ],
+          "id": 3
+        },
+        {
+          "date": "2023-09-04",
+          "description": "test test.",
+          "total": 295,
+          "status": "Approved",
+          "expense_claim_details": [
+            {
+              "date": "2023-09-15",
+              "description": "Pasta",
+              "type": "food",
+              "total": 80
+            }
+          ],
+          "id": 4
+        },
+        {
+          "date": "2023-09-14",
+          "description": "111",
+          "total": 575,
+          "status": "Rejected",
+          "expense_claim_details": [
+            {
+              "date": "2023-09-16",
+              "description": "bazela2",
+              "type": "ticket",
+              "total": 100
+            },
+            {
+              "date": "2023-09-16",
+              "description": "bazela2",
+              "type": "ticket",
+              "total": 30
+            }
+          ],
+          "id": 5
+        },
+        {
+          "date": "2023-08-31",
+          "description": "222",
+          "total": 15,
+          "status": "Approved",
+          "expense_claim_details": [
+            {
+              "date": "2023-09-07",
+              "description": "222",
+              "type": "5",
+              "total": 5
+            },
+            {
+              "date": "2023-09-15",
+              "description": "Pizza",
+              "type": "food",
+              "total": 5
+            }
+          ],
+          "id": 6
+        },
+        {
+          "date": "2023-09-14",
+          "description": "bazela2",
+          "total": 30,
+          "status": "Pending",
+          "expense_claim_details": [
+            {
+              "date": "2023-09-15",
+              "description": "21212",
+              "type": "car rental",
+              "total": 13
+            },
+            {
+              "date": "2023-09-29",
+              "description": "e3e3",
+              "type": "food",
+              "total": 9
+            }
+          ],
+          "id": 7
+        },
+        {
+          "date": "2023-10-06",
+          "description": "no description here",
+          "total": 16,
+          "status": "Rejected",
+          "expense_claim_details": [
+            {
+              "date": "2023-10-05",
+              "description": "High Class",
+              "type": "car rental",
+              "total": 10
+            }
+          ],
+          "id": 8
+        }
+      ],
+      "leaves": [],
+      "id": 3
+    },
+    {
+      "name": "hasan",
+      "email": "siteengineer@gmail.com",
+      "password": "1234567hdgf",
+      "address": "cdsvsv",
+      "department_id": "1",
+      "role": "HR",
+      "expense_claims": [],
+      "leaves": [],
+      "id": 4
+    },
+    {
+      "name": "kamal",
+      "email": "kamal@gmail.com",
+      "password": "1234567543",
+      "address": "2e2e2q",
+      "department_id": "1",
+      "role": "Hr",
+      "expense_claims": [],
+      "leaves": [],
+      "id": 5
+    },
+    {
+      "name": "jaafar",
+      "email": "jaafar@gmail.com",
+      "password": "123456782",
+      "address": "diadnaoindiawdn",
+      "department_id": "1",
+      "role": "Employee",
+      "expense_claims": [],
+      "leaves": [],
+      "id": 6
+    },
+    {
+      "name": "samir",
+      "email": "samir@gmail.com",
+      "password": "12345678987654",
+      "address": "borej al barajna",
+      "department_id": "2",
+      "role": "Hr",
+      "expense_claims": [],
+      "leaves": [],
+      "id": 7
+    }
+  ],
+  "LeaveTypes": [
+    {
+      "id": 1,
+      "name": "Privilege Leave"
+    },
+    {
+      "id": 2,
+      "name": "Earned Leave"
+    },
+    {
+      "id": 3,
+      "name": "Annual Leave"
+    },
+    {
+      "id": 4,
+      "name": "Sick Leave"
+    }
+  ]
+}

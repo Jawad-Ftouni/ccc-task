@@ -1,0 +1,22 @@
+.analytics {
+    text-align: center; /* Center-align the content */
+    display: flex;
+    flex-direction: column; /* Display children in a column */
+    align-items: center; /* Center-align horizontally */
+  }
+  
+  /* Style for the heading */
+  .analytics h1 {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-bottom: 10px; /* Add some space below the heading */
+    color: #ffff;
+}
+  
+  /* Style for the canvas elements */
+  .analytics canvas {
+    max-width: 40%; /* Limit the maximum width to the container's width */
+    height: auto; /* Maintain the aspect ratio, adjusting the height accordingly */
+    display: block; /* Remove any extra spacing around the canvas */
+    margin: 0 auto; /* Center the canvas horizontally */
+  }
+  

@@ -1,0 +1,60 @@
+<div class="form-container">
+  <h1>Add Expense Claim</h1>
+    <form [formGroup]="expenseClaimForm" (ngSubmit)="submitExpenseClaim()">
+  
+        <label for="date">Date:</label>
+        <input type="date" id="date" formControlName="date" />
+        <div *ngIf="formSubmitted && expenseClaimForm.get('date')?.invalid && expenseClaimForm?.hasError('date')">
+          <p class="alert">*Date is required.</p>
+        </div>
+  
+        <label for="description">Description:</label>
+        <input type="text" id="description" formControlName="description" />
+        <div *ngIf="formSubmitted && expenseClaimForm.get('description')?.hasError('required')">
+          <p class="alert">*Description is required.</p>
+        </div>
+  
+        <label for="total">Total:</label>
+        <input type="number" id="total" formControlName="total" />
+        <div *ngIf="formSubmitted && expenseClaimForm.get('total')?.hasError('required')">
+          <p class="alert">*Total is required.</p>
+        </div>
+  
+        <label for="status">Status:</label>
+        <select id="status" formControlName="status">
+          <option value="Pending">Pending</option>
+          <option value="Approved">Approved</option>
+          <option value="Rejected">Rejected</option>
+        </select>
+  
+      <!-- Add a button to add expense claim details -->
+  
+      <!-- Display added expense claim details -->
+      <div formArrayName="expense_claim_details">
+        <div *ngFor="let detail of getDetailControls(); let i = index" [formGroupName]="i" class="expense-detail-container">
+          <h3>Expense Claim Detail {{ i + 1 }}</h3>
+      
+          <label for="date">Date:</label>
+          <input type="date" id="date" formControlName="date" />
+      
+          <label for="description">Description:</label>
+          <input type="text" id="description" formControlName="description" />
+      
+          <label for="type">Type:</label>
+          <select id="type" formControlName="type">
+            <option *ngFor="let type of expenseTypes" [value]="type">{{ type }}</option>
+          </select>
+      
+          <label for="total">Total:</label>
+          <input type="number" id="total" formControlName="total" />
+             <button (click)="removeDetail(i)" class="remove-detail">Remove Detail</button>
+        </div>
+        
+      </div>
+      <div class="btns-container">
+      <button type="button" (click)="addDetail()" class="add-btn">Add Detail</button>
+      <button type="submit">Submit</button>
+    </div>
+    </form>
+  </div>
+  

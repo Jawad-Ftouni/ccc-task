@@ -1,0 +1,46 @@
+<h1>Employees Leaves</h1>
+<div class="date-filter-container">
+    <label for="fromDate">From:</label>
+    <input type="date" id="fromDate" [(ngModel)]="fromDateFilter" (change)="filterByDate()" />
+  
+    <label for="toDate">To:</label>
+    <input type="date" id="toDate" [(ngModel)]="toDateFilter" (change)="filterByDate()" />
+  </div>
+  
+  <div *ngIf="dateError" class="error-message">
+    *To date should be greater than or equal to From date.
+  </div>
+
+<div *ngFor="let employee of filteredEmployees" class="employee-container">
+  <h2>{{ employee.name }}</h2>
+  <div class="table-container">
+  <table class="dark-table">
+    <thead>
+      <th class="table-header">Leave type</th>
+      <th class="table-header">From</th>
+      <th class="table-header">To</th>
+      <th class="table-header">Number of days</th>
+      <th class="table-header">Note</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let leave of employee.leaves" class="table-row">
+        <td class="table-cell-1">
+          <span>{{ leave.leave_type_name }}</span>
+        </td>
+        <td class="table-cell-2">
+          <span>{{ leave.from }}</span>
+        </td>
+        <td class="table-cell-3">
+          <span>{{ leave.to }}</span>
+        </td>
+        <td class="table-cell-4">
+          <span>{{ leave.number_of_days }}</span>
+        </td>
+        <td class="table-cell-5">
+          <span>{{ leave.note }}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

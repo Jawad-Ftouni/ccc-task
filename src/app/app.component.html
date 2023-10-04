@@ -1,0 +1,4 @@
+<app-nav *ngIf="showNav"></app-nav>
+<div [class.router-container]="!isLoggedOut" >
+    <router-outlet></router-outlet>
+</div>

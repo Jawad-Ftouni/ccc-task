@@ -1,0 +1,113 @@
+/* Define the CSS classes for styling */
+.img{
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+.img2{
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.dark-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Text color */
+    box-shadow: 8px;
+  }
+  
+  .table-header {
+    background-color: #444; /* Dark gray header background */
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .table-row:nth-child(even) {
+    background-color: #555; /* Dark gray alternating row background */
+  }
+  
+  /* Style the links in the table */
+  a {
+    color: #00f; /* Blue link color */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  h1{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    color: #ffff;
+  }
+  .table-cell {
+    padding: 10px;
+    text-align: left;
+  }
+  .update-btn{
+    padding: 8px;
+    color: white;
+    background-color: #38b528;
+    border-radius: 4px;
+    box-shadow: inset;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.cancel-btn{
+    padding: 8px;
+    color: white;
+    background-color: #b8ca2f;
+    border-radius: 4px;
+    box-shadow: inset;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer; 
+    margin-left: 1rem;
+}
+/* Style the input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%; /* Make the input fields and select elements span the entire cell */
+    padding: 5px;
+    border: none;
+    background-color: #444; /* Dark gray input background */
+    color: #fff; /* Text color */
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the select dropdown arrow */
+select {
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px; /* Adjust the padding to make space for the arrow */
+    cursor: pointer;
+}
+
+/* Style the input fields in edit mode */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    background-color: #555; /* Dark gray background when in edit mode */
+    outline: none;
+}
+table
+td
+.table-cell-5{
+  text-align: center !important;
+}
+.dark-table th,
+.dark-table td {
+  padding: 10px;
+  text-align: center;
+}

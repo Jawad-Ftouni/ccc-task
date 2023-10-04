@@ -1,0 +1,32 @@
+<div class="container-login">
+    <form [formGroup]="loginForm" class="form-container" (ngSubmit)="onSubmit()">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" formControlName="username" placeholder="Enter your username">
+      <ng-container *ngIf="formSubmitted && loginForm.get('username')?.hasError('required')">
+        <div class="error-message">
+          *Username is required.
+        </div>
+      </ng-container>
+      <ng-container *ngIf="formSubmitted && loginForm.get('username')?.hasError('minlength')">
+        <div class="error-message">
+          *Username must be at least 5 characters long.
+        </div>
+      </ng-container>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" formControlName="password" placeholder="Enter your password">
+      <ng-container *ngIf="formSubmitted && loginForm.get('password')?.hasError('required')">
+        <div class="error-message">
+          *Password is required.
+        </div>
+      </ng-container>
+      <ng-container *ngIf="formSubmitted && loginForm.get('password')?.hasError('minlength')">
+        <div class="error-message">
+          *Password must be at least 8 characters long.
+        </div>
+      </ng-container>
+      <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+
+      <button type="submit" class="button-login">Login</button>
+    </form>
+  </div>
+  

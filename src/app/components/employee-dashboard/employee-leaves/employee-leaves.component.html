@@ -1,0 +1,49 @@
+<h1>Your Leaves</h1>
+
+<div class="date-filter-container">
+  <label for="fromDate">From:</label>
+  <input type="date" id="fromDate" [(ngModel)]="fromDateFilter" (change)="filterByDate()" />
+
+  <label for="toDate">To:</label>
+  <input type="date" id="toDate" [(ngModel)]="toDateFilter" (change)="filterByDate()" />
+</div>
+
+<div *ngIf="dateError" class="error-message">
+  *To date should be greater than or equal to From date.
+</div>
+
+<div class="table-container">
+
+<table class="dark-table">
+  <thead>
+    <th class="table-header">Leave type</th>
+    <th class="table-header">Start Date</th>
+    <th class="table-header">End Date</th>
+    <th class="table-header">Number of days</th>
+    <th class="table-header">Note</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let leave of filteredLeaves;" class="table-row">
+      <td class="table-cell">
+        <span>{{ leave.leave_type_name }}</span>
+      </td>
+      <td class="table-cell">
+        <span>{{ leave.from }}</span>
+      </td>
+      <td class="table-cell">
+        <span>{{ leave.to }}</span>
+      </td>
+      <td class="table-cell">
+        <span>{{ leave.number_of_days }}</span>
+      </td>
+      <td class="table-cell">
+        <span>{{ leave.note }}</span>  
+      </td>
+
+  </tr>
+  </tbody>
+</table>
+</div>
+<div class="add-btn-container">
+  <img src="./../../../../assets/plus-icon.png" class = "img" (click)="navigateToAddLeave()"/>
+</div>

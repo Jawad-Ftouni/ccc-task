@@ -1,0 +1,31 @@
+<h1>Your Expenses</h1>
+<div class="table-container">
+<table class="dark-table">
+  <thead>
+    <th class="table-header">date</th>
+    <th class="table-header">description</th>
+    <th class="table-header">total</th>
+    <th class="table-header">status</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let expenseClaim of expenseClaims;" class="table-row">
+      <td class="table-cell">
+        <span>{{ expenseClaim.date }}</span>
+      </td>
+      <td class="table-cell">
+        <span>{{ expenseClaim.description }}</span>
+      </td>
+      <td class="table-cell">
+        <span class="money">{{ expenseClaim.total }}$</span>
+      </td>
+      <td class="table-cell" [class.status-pending]="expenseClaim.status === 'Pending'" [class.status-approved]="expenseClaim.status === 'Approved'" [class.status-rejected]="expenseClaim.status === 'Rejected'">
+        <span>{{ expenseClaim.status }}</span>
+      </td>
+  </tr>
+  </tbody>
+
+</table>
+</div>
+<div class="add-btn-container">
+    <img src = "./../../../../assets/plus-icon.png" class="img" (click)="navigateToAddExpense()"/>
+</div>

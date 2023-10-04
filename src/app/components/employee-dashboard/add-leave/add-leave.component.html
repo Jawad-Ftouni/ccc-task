@@ -1,0 +1,28 @@
+<div>
+    <h1>Add New Leave</h1>
+    <form [formGroup]="leaveForm" (ngSubmit)="onSubmit()">
+      <label for="name">Leave Type:</label>
+      <select type="text" id="leave_type" formControlName="leave_type_name">
+        <option value="" disabled selected>-- Select Leave Type --</option>
+        <option *ngFor="let leaveType of leaveTypes" [value]="leaveType.name">{{ leaveType.name }}</option>
+      </select>
+      <span *ngIf="leaveForm.get('leave_type')?.hasError('required') && formSubmitted" class="error-message">*Leave type is required.</span>
+
+      <label for="from">From:</label>
+      <input type="date" id="from" formControlName="from">
+      <span *ngIf="leaveForm.get('from')?.hasError('required') && formSubmitted" class="error-message">*From date is required.</span>
+
+      <label for="to">To:</label>
+      <input type="date" id="to" formControlName="to">
+      <span *ngIf="leaveForm.get('to')?.hasError('required') && formSubmitted" class="error-message">*To date required.</span>
+
+      <label for="number_of_days">Number of days:</label>
+      <input id="number_of_days" type="number" formControlName="number_of_days">
+      <span *ngIf="leaveForm.get('number_of_days')?.hasError('required') && formSubmitted" class="error-message">*Number of days is required.</span>
+
+      <label for="note">Note:</label>
+      <textarea id="note" formControlName="note"></textarea>
+
+      <button type="submit" >Add Leave</button>
+    </form>
+  </div>

@@ -1,0 +1,78 @@
+.container-login {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    margin: 0px;
+    background-color: #333;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 17rem;
+    height: 17rem;
+    padding: 20px;
+    border-radius: 5px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    background-color: #555;
+
+  }
+  
+  .error-message {
+    color: rgba(230, 73, 73, 0.96);
+    font-size: 14px;
+    margin-top: 5px;
+    font-size: 0.8rem;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #ffff;
+  }
+  
+  input {
+    width: 92%;
+    font-family: "Roboto", sans-serif;/*new*/
+    background: #f2f2f2;/*new*/
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .button-login {
+    font-family: "Roboto", sans-serif ;/*new*/
+    text-transform: uppercase;
+    outline: 0;
+    background: #1b8381;
+    width: 100%;
+    transition: all 0.3 ease;
+    padding: 10px;
+    background-color: #21a833;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* align-self: flex-end; */
+    justify-self: flex-end;
+    /* width: 6rem; */
+    margin-top: 1rem;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .form-container button:hover,.form-container button:active,.form-container button:focus {
+    background: #43A047;
+  }
+
+  button:hover {
+    background-color: #4E8E63;
+  }
+  

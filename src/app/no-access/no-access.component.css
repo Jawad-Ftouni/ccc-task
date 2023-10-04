@@ -1,0 +1,18 @@
+.no-access-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+.no-access{
+  height: 17rem; 
+  width: 17rem;
+}
+
+h1{
+  font-family: cursive;
+  color: #55cc45;
+}
